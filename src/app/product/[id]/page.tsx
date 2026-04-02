@@ -24,15 +24,13 @@ export default function ProductDetailPage() {
           className="object-contain p-4" 
         />
       </div>
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col md:flex-row gap-8justify-center">
         <h1 className="text-3xl font-bold text-gray-900">{shoe.name}</h1>
         <p className="text-sky-600 font-semibold mt-2">{shoe.category || "Premium Footwear"}</p>
         <p className="text-2xl font-bold mt-4">${shoe.price}</p>
         <p className="text-gray-600 mt-6 leading-relaxed">
           {(shoe as any).description || "A high-performance shoe designed for everyday comfort and style. Built with premium materials for a long-lasting experience."}
         </p>
-
-        {/* Action Buttons */}
         <div className="mt-10 space-y-4">
           <button 
             onClick={() => addToCart(shoe)}

@@ -7,8 +7,8 @@ export default function HomePage() {
   const { products, addToCart, addToWishlist } = useCart();
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 pb-20">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen  bg-gray-50 ">
+      <div className="max-w-7xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">
           Our Premium Shoe Collection
         </h1>
