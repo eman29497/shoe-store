@@ -29,7 +29,7 @@ export default function ProductDetailPage() {
         <p className="text-sky-600 font-semibold mt-2">{shoe.category || "Premium Footwear"}</p>
         <p className="text-2xl font-bold mt-4">${shoe.price}</p>
         <p className="text-gray-600 mt-6 leading-relaxed">
-          {shoe.description || "A high-performance shoe designed for everyday comfort and style. Built with premium materials for a long-lasting experience."}
+          {(shoe as any).description || "A high-performance shoe designed for everyday comfort and style. Built with premium materials for a long-lasting experience."}
         </p>
 
         {/* Action Buttons */}
