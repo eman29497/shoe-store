@@ -18,7 +18,7 @@ export default function Admin() {
       category,
       image,
     };
-    addProduct(newShoe);
+    addProduct(newShoe.name,newShoe.price,newShoe.category,newShoe.image);
     alert('Shoe added successfully!');
     router.push('/');
   };
