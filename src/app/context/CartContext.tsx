@@ -30,7 +30,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     name: "Nike Air Max Pulse",
     price: 15000,
     category: "Running",
-    image: "/shoe.png", // Apni image ka sahi path check kar lein
+    image: "/shoe.png",
     quantity: 1
   },
   {
