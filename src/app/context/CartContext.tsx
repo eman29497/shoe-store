@@ -13,6 +13,7 @@ interface CartContextType {
   cart: Product[];
   wishlist: Product[];
   isLoggedIn: boolean;
+  addProduct:(name: string,price:number,category:string,image:string)=>void;
   addToCart: (product: Product) => void;
   removeFromCart: (id: number) => void;
   updateQuantity: (id: number, type: "plus" | "minus") => void;
@@ -103,11 +104,22 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   const removeFromWishlist = (id: number) => {
     setWishlist((prev) => prev.filter((item) => item.id !== id));
   };
+  const addProduct = (name:string,price:number,category:string,image:string)=>{
+    const newProduct = {
+        id:Date.now(),
+        name,
+        price,
+        category,
+        image,
+        quantity:1
+    };
+    setProducts((prev) => [...prev,newProduct]);
+  }
   return (
     <CartContext.Provider
       value={{
         products, cart, wishlist, isLoggedIn,
-        addToCart, removeFromCart, updateQuantity,
+        addToCart,addProduct, removeFromCart, updateQuantity,
         addToWishlist, removeFromWishlist, login
       }}
     >
